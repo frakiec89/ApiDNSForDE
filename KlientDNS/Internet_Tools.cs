@@ -60,8 +60,7 @@ namespace KlientDNS
             string comand = $"/C netsh interface ip set dns name=\"{adapter}\" source=\"static\" address=\"{dnsString}\"";
             ProcessStartInfo psiOpt = new ProcessStartInfo("runas.exe");
             psiOpt.FileName = "cmd.exe";
-            //psiOpt.UserName = "admin";
-            //psiOpt.Password = GetPassword("GTX1050ti");
+        
             psiOpt.Arguments = comand;
             psiOpt.Verb = "runas";
             psiOpt.UseShellExecute = true;
